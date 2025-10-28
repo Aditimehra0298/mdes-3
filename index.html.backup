@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDES - Machinery Design Excellence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff5e00;
+            text-align: center;
+        }
+        .redirect-notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MDES - Machinery Design Excellence</h1>
+        <div class="redirect-notice">
+            <p><strong>Redirecting to main site...</strong></p>
+            <p>If you are not redirected automatically, <a href="index.html">click here</a>.</p>
+        </div>
+        <p>This is a backup index file. The main site should load automatically.</p>
+    </div>
+    
+    <script>
+        // Redirect to main index.html
+        setTimeout(function() {
+            window.location.href = 'index.html';
+        }, 1000);
+    </script>
+</body>
+</html>

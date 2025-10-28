@@ -1,0 +1,20 @@
+{
+  "name": "mdes-website",
+  "version": "1.0.0",
+  "description": "MDES - Machinery Design Excellence Website",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site - no build required'",
+    "start": "echo 'Static site - no start required'"
+  },
+  "dependencies": {
+    "ogl": "^1.0.11"
+  },
+  "keywords": ["mdes", "machinery", "design", "excellence"],
+  "author": "MDES Team",
+  "license": "MIT",
+  "engines": {
+    "node": "18.x",
+    "npm": ">=8.0.0"
+  }
+}
