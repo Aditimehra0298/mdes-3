@@ -1173,4 +1173,17 @@ document.addEventListener('DOMContentLoaded', () => {
         col.addEventListener('click', toggleFlip);
         col.addEventListener('touchstart', toggleFlip);
     });
+
+    // Apply button functionality for collaborator cards
+    const applyBtns = document.querySelectorAll('.mdes-collaborators .apply-btn');
+    applyBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent card flip
+            // Open the apply modal
+            const applyModal = document.getElementById('applyModal');
+            if (applyModal) {
+                applyModal.style.display = 'flex';
+            }
+        });
+    });
 });
