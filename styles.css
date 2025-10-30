@@ -2265,6 +2265,28 @@ body {
     pointer-events: auto;
 }
 
+/* Compact content inside the special no-flip card so everything fits neatly */
+.mdes-collaborators .card-container.no-flip .inner {
+    transform: translateY(-50%) translateZ(60px) scale(0.9) !important;
+    padding: 0.75rem !important;
+}
+.mdes-collaborators .card-container.no-flip .inner p {
+    margin-bottom: 0.75rem !important;
+}
+.mdes-collaborators .card-container.no-flip .inner p:first-child {
+    font-size: 2rem !important;
+}
+.mdes-collaborators .card-container.no-flip .inner p:nth-child(2) {
+    font-size: 0.95rem !important;
+}
+.mdes-collaborators .card-container.no-flip .qr-scanner-trigger {
+    max-width: 80px !important;
+}
+.mdes-collaborators .card-container.no-flip .logo-buttons .apply-btn {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.9rem !important;
+}
+
 /* Participation Packages Section */
 .participation-packages {
     padding: 100px 0;
