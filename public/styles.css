@@ -1848,6 +1848,10 @@ body {
     position: relative;
 }
 
+.orange-text {
+    color: #ff6b35;
+}
+
 .section-title::after {
     content: '';
     position: absolute;

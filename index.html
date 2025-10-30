@@ -669,7 +669,7 @@
     <!-- MDES Collaborator Cards Section -->
     <section id="mdes-collaborators" class="mdes-collaborators">
         <div class="wrapper">
-            <h2 class="section-title">MDES Collaborators</h2> 
+            <h2 class="section-title"><span class="orange-text">Wall of Excellence</span> - Our MDES Collaborators</h2> 
             <div class="cols">
                 <!-- Card 1 -->
                 <div class="col">
@@ -746,20 +746,17 @@
                 <!-- Card 5 (Fixed style) -->
                 <div class="col">
                     <h3 class="card-title">Testing & Compliance</h3>
-                    <div class="card-container">
-                        <div class="front" style="background-image: url(A6.jpeg)">
-                            <!-- Inner content removed -->
-                        </div>
-                        <div class="back">
+                    <div class="card-container no-flip">
+                        <div class="back always-visible">
                             <div class="inner">
                                 <p style="font-size: 2.5rem; font-weight: bold; color: #FFFFFF; line-height: 1.2; margin-bottom: 0.5rem;">MDES</p>
-                                <p style="font-size: 1rem; color: rgba(255,255,255,0.8); letter-spacing: 1px; margin-bottom: 1rem;">Collaborator</p>
+                                <p style="font-size: 1rem; color: rgba(255,255,255,0.8); letter-spacing: 1px; margin-bottom: 1rem;">Training & Compliance Collaborator</p>
                                 <div style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.5rem;">
-                                    <img src="image (4).png" alt="Logo 1" style="max-width: 100px; height: auto;">
-                                    <img src="l5.png" alt="Logo 2" style="max-width: 100px; height: auto;">
+                                    <img src="image (4).png" alt="Logo 1" class="qr-scanner-trigger" data-logo="1" style="max-width: 100px; height: auto; cursor: pointer; transition: transform 0.3s ease;">
+                                    <img src="l5.png" alt="Logo 2" class="qr-scanner-trigger" data-logo="2" style="max-width: 100px; height: auto; cursor: pointer; transition: transform 0.3s ease;">
                                 </div>
                                 <div class="logo-buttons">
-                                    <button class="logo-btn apply-btn">Apply Now</button>
+                                    <button class="logo-btn apply-btn" disabled> Click on Logo</button>
                                 </div>
                             </div>
                         </div>
@@ -1278,7 +1275,7 @@
                 
                 <div class="form-section">
                     <div class="form-container">
-                        <h3>Apply for MDES Participation</h3>
+                        <h3>Apply for MDES Collaborators</h3>
                         <p class="form-description">Fill out the form below to secure your spot at India's premier machinery exhibition.</p>
                         
                         <form class="application-form">
@@ -1339,7 +1336,7 @@
                             </div>
                             
                             <div class="form-submit">
-                                <button type="submit" class="submit-button">Apply for MDES Participation</button>
+                                <button type="submit" class="submit-button">Apply for MDES Collaborators</button>
                             </div>
                         </form>
                     </div>
@@ -1691,7 +1688,7 @@
     <div id="applyModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Apply for MDES Participation</h2>
+                <h2>Apply for MDES Collaborators</h2>
                 <span class="close">&times;</span>
             </div>
             <div class="modal-body">
@@ -1753,7 +1750,7 @@
                     </div>
                     
                     <div class="form-submit">
-                        <button type="submit" class="submit-button">Apply for MDES Participation</button>
+                        <button type="submit" class="submit-button">Apply for MDES Collaborators</button>
                     </div>
                 </form>
             </div>
@@ -2041,7 +2038,46 @@
         </div>
     </div>
 
+    <!-- QR Scanner Modal -->
+    <div id="qr-scanner-modal" class="qr-modal">
+        <div class="qr-modal-content">
+            <div class="qr-modal-header">
+                <h3>QR Code Scanner</h3>
+                <span class="qr-close">&times;</span>
+            </div>
+            <div class="qr-modal-body">
+                <div class="scanner-holder">
+                    <div class="scanner-frame">
+                        <div class="scanner-corners">
+                            <div class="corner top-left"></div>
+                            <div class="corner top-right"></div>
+                            <div class="corner bottom-left"></div>
+                            <div class="corner bottom-right"></div>
+                        </div>
+                        <div class="scanner-line"></div>
+                        <div id="qr-reader" class="qr-reader-container"></div>
+                    </div>
+                    <div class="scanner-instructions">
+                        <p>Position the QR code within the frame</p>
+                    </div>
+                </div>
+                <div id="qr-result" class="qr-result-container" style="display: none;">
+                    <div class="qr-result-header">
+                        <i class="result-icon">✓</i>
+                        <strong>Scanned Successfully!</strong>
+                    </div>
+                    <div id="qr-result-text" class="qr-result-text"></div>
+                </div>
+            </div>
+            <div class="qr-modal-footer">
+                <button id="qr-start-btn" class="qr-btn qr-btn-primary">Start Scanner</button>
+                <button id="qr-stop-btn" class="qr-btn qr-btn-secondary" style="display: none;">Stop Scanner</button>
+            </div>
+        </div>
+    </div>
+
     <script src="google-sheets-integration.js"></script>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 </body>
 </html>
