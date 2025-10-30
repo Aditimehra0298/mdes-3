@@ -1121,6 +1121,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (qrImg) {
                 if (logoId === '2') {
                     qrImg.src = 'Screenshot 2025-10-30 at 3.36.16 PM.png';
+                } else if (logoId === '1') {
+                    qrImg.src = 'Screenshot 2025-10-30 at 3.46.34 PM.png';
                 } else {
                     qrImg.src = 'image (4).png';
                 }
@@ -1134,6 +1136,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (qrImg) {
                 if (logoId === '2') {
                     qrImg.src = 'Screenshot 2025-10-30 at 3.36.16 PM.png';
+                } else if (logoId === '1') {
+                    qrImg.src = 'Screenshot 2025-10-30 at 3.46.34 PM.png';
                 } else {
                     qrImg.src = 'image (4).png';
                 }
