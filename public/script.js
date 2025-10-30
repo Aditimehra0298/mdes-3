@@ -1158,6 +1158,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const cols = document.querySelectorAll('.mdes-collaborators .col');
     cols.forEach(col => {
         function toggleFlip(e) {
+            // Do not flip if this column contains a no-flip card
+            const container = col.querySelector('.card-container');
+            if (container && container.classList.contains('no-flip')) {
+                return;
+            }
             // Only flip if the event target is the .col itself
             // or one of its non-interactive children (.card-container, .front)
             // This prevents flipping when buttons are clicked/tapped

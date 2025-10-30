@@ -2252,6 +2252,19 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
+/* MDES Collaborators: force no-flip card to show back side only */
+.mdes-collaborators .card-container.no-flip .front {
+    display: none !important;
+}
+.mdes-collaborators .card-container.no-flip .back {
+    opacity: 1 !important;
+    transform: none !important;
+    display: block !important;
+}
+.mdes-collaborators .card-container.no-flip .back.always-visible {
+    pointer-events: auto;
+}
+
 /* Participation Packages Section */
 .participation-packages {
     padding: 100px 0;

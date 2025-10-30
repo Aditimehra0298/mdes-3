@@ -2274,6 +2274,19 @@ body {
     z-index: 0;
 }
 
+/* MDES Collaborators: force no-flip card to show back side only */
+.mdes-collaborators .card-container.no-flip .front {
+    display: none !important;
+}
+.mdes-collaborators .card-container.no-flip .back {
+    opacity: 1 !important;
+    transform: none !important;
+    display: block !important;
+}
+.mdes-collaborators .card-container.no-flip .back.always-visible {
+    pointer-events: auto;
+}
+
 .participation-packages .container {
     position: relative;
     z-index: 1;
