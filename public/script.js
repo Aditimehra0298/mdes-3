@@ -1102,7 +1102,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Modal logic
     const modal = document.getElementById('qrModal');
     const closeBtn = document.querySelector('.close-button');
-    const qrTriggers = document.querySelectorAll('.qr-trigger');
+    const qrTriggers = document.querySelectorAll('.qr-scanner-trigger');
+    const qrImg = modal ? modal.querySelector('img') : null;
 
     function openModal() {
         if (modal) modal.style.display = 'flex';
@@ -1116,11 +1117,27 @@ document.addEventListener('DOMContentLoaded', () => {
         // Handle click for mouse users
         btn.addEventListener('click', (e) => {
             e.stopPropagation(); // Stop event from bubbling to .col
+            const logoId = btn.getAttribute('data-logo');
+            if (qrImg) {
+                if (logoId === '2') {
+                    qrImg.src = 'Screenshot 2025-10-30 at 3.36.16 PM.png';
+                } else {
+                    qrImg.src = 'image (4).png';
+                }
+            }
             openModal();
         });
         // Handle touchstart for touch users
         btn.addEventListener('touchstart', (e) => {
             e.stopPropagation();
+            const logoId = btn.getAttribute('data-logo');
+            if (qrImg) {
+                if (logoId === '2') {
+                    qrImg.src = 'Screenshot 2025-10-30 at 3.36.16 PM.png';
+                } else {
+                    qrImg.src = 'image (4).png';
+                }
+            }
             openModal();
         });
     });
